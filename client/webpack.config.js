@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
   mode: 'development',
 
-  entry: './src/index.js',
+  entry: './src/index',
 
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -24,7 +24,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js|jsx|ts|tsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
